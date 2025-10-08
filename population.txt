@@ -1,0 +1,17 @@
+# Population Growth Model: P = P * (1 + r)
+
+# Input
+P = float(input("Enter current population: "))
+r = float(input("Enter annual growth rate (%): ")) / 100
+t = int(input("Enter number of years: "))
+
+print("\n📊 Yearly Population Projection:")
+print("-------------------------------")
+
+# Loop over each year
+for year in range(1, t + 1):
+    P = P * (1 + r)
+    print(f"Year {year}: {int(P)}")
+
+print("-------------------------------")
+print(f"📈 Final Population after {t} years: {int(P)}")
