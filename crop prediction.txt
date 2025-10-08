@@ -1,0 +1,22 @@
+# Simple crop prediction based on temperature and rainfall
+
+def predict_crop(temperature, rainfall):
+    if temperature > 30 and rainfall > 200:
+        return "Rice"
+    elif 20 <= temperature <= 30 and 100 <= rainfall <= 200:
+        return "Sugarcane"
+    elif temperature < 20 and rainfall < 100:
+        return "Wheat"
+    elif 25 <= temperature <= 35 and 80 <= rainfall <= 150:
+        return "Maize"
+    else:
+        return "No suitable crop found"
+
+# User input
+print("🌾 Simple Crop Prediction System")
+temp = float(input("Enter Temperature (°C): "))
+rain = float(input("Enter Rainfall (mm): "))
+
+# Predict crop
+crop = predict_crop(temp, rain)
+print(f"✅ Recommended Crop: {crop}")
